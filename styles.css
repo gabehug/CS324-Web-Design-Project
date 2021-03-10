@@ -1,0 +1,132 @@
+/* Main Page Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+/* NavBar Styles */
+.logo-wrapper,
+.nav-links {
+    display: flex;
+}
+
+.logo-wrapper,
+nav {
+    flex: 1;
+}
+
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+.nav-links {
+    justify-content:space-evenly;
+    list-style: none;
+    
+}
+
+.nav-link {
+    color:#547379;
+    font-size:18px;
+    text-decoration: none;
+    
+}
+
+.nav-link:hover {
+    color: #5FB8CD;
+}
+
+@media (max-width: 800px) {
+    .nav-link {
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+
+.welcome h1{
+   text-align: center;
+   font-size: 60px;
+   margin-top: 80px;
+   margin-bottom: 80px;
+   color: #547379;
+}
+
+/* Search Box */
+
+form.search input[type=text] {
+    margin-bottom: 80px;
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border: 0;
+    
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #5FB8CD;
+    color: White;
+    font-size: 17px;
+    cursor: pointer;
+    border:0;
+}
+
+form.search button:hover {
+    background: #547379;
+}
+
+
+/* Quick Links */
+
+.btn-group  button {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 2px;
+    background-color: #f1f1f1;
+    border: 0.5px solid grey;
+    font-size: 16px;
+    color: #547379;
+}
+
+.btn-group h3 {
+    margin-top: 15px;
+}
+
+.btn-group {
+    width: 800px;
+    overflow-y: auto;
+    margin: auto;
+}
+
+
+@media (max-width: 800px) {
+    .btn-group {
+        width: 80%;
+        margin: auto;
+    }
+    .btn-group button {
+        width: 90%;
+        height: 60px;
+    }
+    .btn-group h3 {
+        margin-top: -10px;
+    }
+    .btn-group img {
+        height:0;
+    }
+}
