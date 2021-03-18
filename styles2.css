@@ -3,13 +3,15 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Futura;
 }
 header {
-    display: flex;
-    width: 80%;
-    height: 10vh;
-    margin: auto;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  margin: auto;
+  align-items: center;
+  background-color: #0e3562;
 }
 
 /* NavBar Styles */
@@ -21,36 +23,38 @@ header {
 .logo-wrapper,
 nav {
     flex: 1;
+    margin-left: 40px;
 }
 
 .logo {
     font-weight: 400;
     margin: 5px;
+    
 }
 
 .nav-links {
     justify-content:space-evenly;
     list-style: none;
-
 }
 
 .nav-link {
-    color:#547379;
+    color:#f1f1f1;
     font-size:18px;
     text-decoration: none;
-
 }
 
 .nav-link:hover {
     color: #5FB8CD;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 900px) {
     .nav-link {
         font-size: 12px;
         text-decoration: none;
     }
 }
+
 
 /* -- Term header and button -- */
 .grade-header {
@@ -159,3 +163,46 @@ td{
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/* Footer */
+
+.cus-div {
+  width:100%;
+  position:sticky;
+  left:0;
+  bottom: 0;
+}
+
+#skew {
+  background-color: #0e3562;
+  background-position: center center;
+  z-index: 1 ;
+}
+
+.cus-div:after {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  content: '';
+}
+
+#skew:after {
+  transform-origin: left top;
+  transform: skewY(-2deg);
+}
+
+.content {
+  text-align: center;
+  padding: 30px 10px;
+  overflow: hidden;
+  display: block;
+  height: auto;
+  color:#f1f1f1;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+}
