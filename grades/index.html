@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Grades</title>
+  </head>
+  <body>
+    <!--copied from home page for universal nav bar-->
+    <header>
+
+        <div class="logo-wrapper">
+            <img src="assets/logo.png" height= "50" alt="Locus Clone">
+
+        </div>
+
+        <!-- NEED TO CHANGE LINKS TO PAGES-->
+
+        <!--FOR NAV BAR -->
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#classsearch">Class Search</a></li>
+                <li><a class="nav-link" href="#grades">Grades</a></li>
+                <li><a class="nav-link" href="#personal">Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <section class="grade-header">
+        <h1>Grades - Spring 2021</h1>
+
+        <div class="dropdown">
+          <button onclick="listTerms()" class="dropbtn">Select Term</button>
+          <div id="dropdown-list" class="dropdown-content">
+            <a href="#">Fall 2020</a>
+            <a href="#">Spring 2020</a>
+            <a href="#">Fall 2019</a>
+            <a href="#">Spring 2019</a>
+            <a href="#">Fall 2018</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="grade-content">
+        <section class="grade-section">
+          <!--we need 9 rows-->
+          <table class="grades-table">
+            <tr class="grades-header">
+              <th>Description</th>
+              <th>Credits</th>
+              <th>Grades</th>
+            </tr>
+
+            <!--classes are dummy data -- for mockup only-->
+            <tr class="class1">
+              <td>COMP 306 - Data Mining</td>
+              <td>3.0</td>
+              <td>A</td>
+            </tr>
+
+            <tr class="class2">
+              <td>COMP 312 - Open Source Practicum</td>
+              <td>3.0</td>
+              <td>A</td>
+            </tr>
+
+            <tr class="class3">
+              <td>Math 131 - Applied Calculus</td>
+              <td>3.0</td>
+              <td>B</td>
+            </tr>
+
+            <tr class="class4">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr class="class5">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr class="class6">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr class="class7">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr class="class8">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+          </table>
+        </section>
+
+        <section class="gpa-section">
+          <table class="gpa-table"> <!--two column table: first td has default word; second td is actual value -->
+            <!--main header-->
+            <tr>
+              <th>Units Towards GPA:</th>
+              <th>Cumulative Total:</th>
+            </tr>
+            <tr>
+              <td>Taken</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Passed</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>In Progress</td>
+              <td></td>
+            </tr>
+            <!-- Units Not for GPA -->
+            <tr>
+              <th>Units Not for GPA</th>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Taken</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Passed</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Transfer Units</td>
+              <td></td>
+            </tr>
+            <!--Total Grade Points -->
+            <tr>
+              <th>Total Grade Points</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>/ Units Taken Toward GPA</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>=GPA</th>
+              <td></td>
+            </tr>
+          </table>
+        </section>
+      </div>
+
+
+
+    </main>
+
+  </body>
+</html>

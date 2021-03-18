@@ -1,0 +1,161 @@
+/* Main Page Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+/* NavBar Styles */
+.logo-wrapper,
+.nav-links {
+    display: flex;
+}
+
+.logo-wrapper,
+nav {
+    flex: 1;
+}
+
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+.nav-links {
+    justify-content:space-evenly;
+    list-style: none;
+
+}
+
+.nav-link {
+    color:#547379;
+    font-size:18px;
+    text-decoration: none;
+
+}
+
+.nav-link:hover {
+    color: #5FB8CD;
+}
+
+@media (max-width: 800px) {
+    .nav-link {
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+
+/* -- Term header and button -- */
+.grade-header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.grade-header h1{
+   display: inline-block;
+   padding-right: 80px;
+   font-size: 60px;
+   color: #547379;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -- Grades table --*/
+
+/*style for grid placement*/
+.grade-content{
+    display: grid;
+    grid-template-columns: 50% 50%; /*how to apply table properties to grid column>*/
+    justify-items: center;
+    margin-bottom: 80px;
+    margin-left: 5%;
+}
+
+.grade-section{
+  margin-right: -25%;
+}
+
+.gpa-section{
+  margin-left: -25%;
+}
+
+/*table styling*/
+table{
+  border-collapse: collapse;
+  border: 5px solid #1CA3F4;
+}
+
+th, td{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  table-layout: fixed;
+  width: 210px;
+  height: 50px;
+}
+
+td{
+  color: #5b6773;
+  font-size: 20px;
+}
+
+
+/* -- Dropdown menu -- */
+
+.dropbtn {
+  display: inline-block;
+  background-color: #60bef7;
+  box-shadow: 5px 7px 16px 0px rgba(0,0,0,0.73);
+  border-radius: 22px;
+  color: white;
+  padding: 11px;
+  width: 200%;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
