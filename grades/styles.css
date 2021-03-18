@@ -58,7 +58,7 @@ nav {
   margin-right: auto;
   text-align: center;
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .grade-header h1{
@@ -76,7 +76,8 @@ nav {
     display: grid;
     grid-template-columns: 50% 50%; /*how to apply table properties to grid column>*/
     justify-items: center;
-    margin-bottom: auto;
+    margin-bottom: 80px;
+    margin-left: 5%;
 }
 
 .grade-section{
@@ -90,15 +91,21 @@ nav {
 /*table styling*/
 table{
   border-collapse: collapse;
-  border: 2px solid black;
+  border: 5px solid #1CA3F4;
 }
 
 th, td{
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
   border: 1px solid black;
   table-layout: fixed;
   width: 210px;
   height: 50px;
+}
+
+td{
+  color: #5b6773;
+  font-size: 20px;
 }
 
 
@@ -106,7 +113,8 @@ th, td{
 
 .dropbtn {
   display: inline-block;
-  background-color: #1CA3F4;
+  background-color: #60bef7;
+  box-shadow: 5px 7px 16px 0px rgba(0,0,0,0.73);
   border-radius: 22px;
   color: white;
   padding: 11px;
@@ -125,6 +133,7 @@ th, td{
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-right: 10%;
 }
 
 /* Dropdown Content (Hidden by Default) */
