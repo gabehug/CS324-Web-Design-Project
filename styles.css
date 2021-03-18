@@ -292,3 +292,132 @@ form.search button:hover {
         display: none;
     }
 }
+
+/* Tabs */
+
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    color: #547379;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    background: none;
+    font-size: 24px;
+    outline: none;
+}
+
+.tab button:hover {
+    color: #5FB8CD;
+}
+
+.tab button.active {
+    background-color: #f1f1f1;
+    text-decoration: underline;
+}
+
+/* Class Search Tab */
+
+.left-sec:before, .left-sec:after {
+    content: " ";
+    display: inline-table;
+}
+
+.left-sec:after {
+    clear: both;
+}
+
+.left-sec {
+    width: 589px;
+    margin: 50px 50px;
+    border: 0.5px solid #5FB8CD;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.full-class-search {
+    width: 439px;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-class-search input[type=text], input[type=number], select, textarea{
+    border-color: 0.5px solid grey;
+    padding: 7px;
+    background: white;
+    border-radius: 5px;
+    float: right;
+}
+
+.full-class-search [type=reset], input[type=submit], select, textarea{
+    font-size: 18px;
+    color: white;
+    background: #0e3562;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.full-class-search [type=reset]:hover, input[type=submit]:hover {
+    background: #5FB8CD;
+    color: white;
+}
+
+/* Academic Requirement Tab */
+
+.collapsible {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #547379;
+    text-decoration: underline;
+}
+
+.activetab, .collapsible:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.collapsible:after {
+    content: "\25c4";
+    font-size: 20px;
+    color: #547379;
+    float: right;
+}
+
+.activetab:after {
+    content: "\25bc";
+}
+
+.collap-content {
+    width: 439px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    font-size: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collap-content p {
+    text-indent: 15px;
+}
+
+/* Calendar */
+
+.right-sec img {
+    margin-top: 50px;
+    border: 0.5px solid #5FB8CD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

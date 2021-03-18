@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Search</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <img src="assets/logo.png" height= "50" alt="Locus Clone">
+            </a>
+            
+        
+        </div>
+
+        <!-- NEED TO CHANGE LINKS TO PAGES-->
+
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="class-schedule.html">Class Search</a></li>
+                <li><a class="nav-link" href="#grades">Grades</a></li>
+                <li><a class="nav-link" href="#personal">Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div style="display: flex;">
+            <section class="left-sec" style="width: 50%; height: 715px;">
+                <table style="width:100%">
+                    <th>
+                        <tr>
+                            <div class="tab">
+                                <button class="tablinks" style="float:left; padding-inline-start: 25%;" onclick="openTab(event, 'ClassSearch')" id="defaultOpen">Class Search</button>
+                                <button class="tablinks" style="float:right; padding-inline-end: 20%;" onclick="openTab(event, 'AcademicRequirement')">Academic Requirements</button>
+                            </div>
+                        </tr>
+                    </th>
+
+                    <!-- Class Search Tab -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="ClassSearch" class="tabcontent">
+                                    <!-- Complete form action for search-->
+                                    <form class="full-class-search" autocomplete="off" action="">
+                                        <label for="subject">Subject:
+                                            <input type="text" id="subject" name="subject">
+                                        </label>
+                                        <br></br>
+                                        <label for="course-num">Course Number:
+                                            <input type="number" id="course-num" name="course-num">
+                                        </label>
+                                        <br></br>
+                                        <label for="class-num">Class Number:
+                                            <input type="number" id="class-num" name="class-num">
+                                        </label>
+                                        <br></br>
+                                        <label for="instr-name">Instructor Name:
+                                            <input type="text" id="instr-name" name="instr-name">
+                                        </label>
+                                        <br></br>
+                                        <label for="day-of-week" class="day-of-week">Days of the Week:
+                                            <br>
+                                            <input type="checkbox" name="day-of-week" value="Mon"> Mon
+                                            <input type="checkbox" name="day-of-week" value="Tues"> Tues
+                                            <input type="checkbox" name="day-of-week" value="Wed"> Wed
+                                            <input type="checkbox" name="day-of-week" value="Thurs"> Thurs
+                                            <input type="checkbox" name="day-of-week" value="Fri"> Fri
+                                        </label>
+                                        <br></br>
+                                        <input type="reset" value="Clear">
+                                        <input type="submit" value="Submit">
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <!-- Academic Requirements Tab -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="AcademicRequirement" class="tabcontent">
+                                    <button type="button" class="collapsible">Undergrad First Year Requirements</button>
+                                    <div class="collap-content">
+                                        <h3>Required Courses:</h3>
+                                        <p>First Year Seminar</p>
+                                        <p>Undergrad Writing Seminar</p>
+                                    </div>
+                                    <button type="button" class="collapsible">Core 2012 - Tier 1 Areas</button>
+                                    <div class="collap-content">
+                                        <h3>Required Courses:</h3>
+                                        <p>Artistic Knowledge</p>
+                                        <p>Historical Knowledge</p>
+                                        <p>Literary Knowledge</p>
+                                    </div>
+                                    <button type="button" class="collapsible">Core 2012 - Tier 2 Areas</button>
+                                    <div class="collap-content">
+                                    
+                                    </div>
+                                    <button type="button" class="collapsible">Undergrad Writing Intensive</button>
+                                    <div class="collap-content">
+                                    
+                                    </div>
+                                    <button type="button" class="collapsible">Undergrad Engaged Learning</button>
+                                    <div class="collap-content">
+                                     
+                                    </div>
+                                    <script src="javascript/collapse.js"></script>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </section>
+
+            <!-- Placeholder image for calendar-->
+            <section class="right-sec" style="width:50%">
+                <img src="assets/calendar.png">
+            </section>
+        </div>
+        
+    </main>
+    <script src="javascript/tab.js"></script>
+
+
+    <footer>
+        <div class="wrapper" style="padding-top: 110px;">
+            <div id="skew" class="cus-div">
+                <div class="content">
+                    <h2>Locus Clone</h2>
+                    <a href="https://github.com/gabehug/CS324-Web-Design-Project">
+                        <img src="assets/github.png" height= "30" alt="Project Github">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
