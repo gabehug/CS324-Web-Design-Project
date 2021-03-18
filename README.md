@@ -1,2 +1,5 @@
 # CS324-Web-Design-Project
-In this project we are designing a mock University Registration Website for our COMP 324 class at Loyola University Chicago.
+
+
+The goal of this project is to make an alternative student resources website. The website will provide access to class information, personal accounts, and other campus resources. 
+
