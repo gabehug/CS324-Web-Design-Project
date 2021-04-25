@@ -6,12 +6,12 @@
     font-family: Futura;
 }
 
-/*
+
 body {
     background-image: url(/assets/dot-grid.png);
 }
 
-*/
+
 
 
 header {
@@ -32,13 +32,13 @@ header {
 .logo-wrapper,
 nav {
     flex: 1;
-    margin-left: 40px;
+    margin-left: 20px;
+    
 }
 
 .logo {
     font-weight: 400;
-    margin: 5px;
-    
+    margin: 40px;
 }
 
 .nav-links {
@@ -50,14 +50,19 @@ nav {
     color:#f1f1f1;
     font-size:18px;
     text-decoration: none;
+    text-align: center;
+    padding: 16px 20px;
+    overflow: hidden;
 }
 
 .nav-link:hover {
-    color: #5FB8CD;
+    color: #0e3562;
+    background-color: white;
 }
 
 
-@media (max-width: 900px) {
+
+@media (max-width: 920px) {
     .nav-link {
         font-size: 12px;
         text-decoration: none;
@@ -78,6 +83,12 @@ nav {
         font-size: 60px;
         text-decoration: none;
         margin-top: .5em;
+    }
+}
+
+@media (max-width: 750px) {
+    nav{
+        display: none;
     }
 }
 
