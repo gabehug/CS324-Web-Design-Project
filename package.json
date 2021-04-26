@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "COMP330_430",
+  "main": "personal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabehug/CS324-Web-Design-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabehug/CS324-Web-Design-Project/issues"
+  },
+  "homepage": "https://github.com/gabehug/CS324-Web-Design-Project#readme",
+  "dependencies": {
+    "firebase": "^8.4.2"
+  }
+}
