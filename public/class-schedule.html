@@ -8,36 +8,6 @@
     <link rel="stylesheet" href="./schedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="assets/logo.png">
-    <script src="/__/firebase/8.4.2/firebase-app.js"></script>
-    <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
-    <script src="/__/firebase/init.js"></script>
-
-    <!-- Schedule Builder Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var calendarEl = document.getElementById('calendar');
-          var date = new Date();
-          
-          var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialDate: date,
-            headerToolbar: false,
-            initialView: "timeGridWeek",
-            height: "auto",
-            weekends: false,
-            expandRows: true,
-            editable: false,
-            selectable: false,
-            nowIndicator: false,
-            allDaySlot: false,
-            slotMinTime: "08:00:00",
-            slotMaxTime: "21:00:00",
-            events: "https://comp430-764fa-default-rtdb.firebaseio.com/events"
-          });
-      
-          calendar.render();
-        });
-      
-    </script>
 </head>
 <body>
     <header>
@@ -48,8 +18,6 @@
             
         
         </div>
-
-        <!-- NEED TO CHANGE LINKS TO PAGES-->
 
         <nav>
             <ul class="nav-links">
@@ -178,6 +146,65 @@
             </div>
         </div>
     </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.4.2/firebase-auth.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyC-z98Nc4j11cPpC6eRqB3iQOSlQrfe7aA",
+        authDomain: "comp430-764fa.firebaseapp.com",
+        databaseURL: "https://comp430-764fa-default-rtdb.firebaseio.com",
+        projectId: "comp430-764fa",
+        storageBucket: "comp430-764fa.appspot.com",
+        messagingSenderId: "774865356524",
+        appId: "1:774865356524:web:63328ef09e7142cdf907c9",
+        measurementId: "G-NDEX7JKYRL"
+    };
+    firebase.initializeApp(firebaseConfig);
+    
+    // Makes auth a reference to firebase authentication 
+    const auth = firebase.auth();
+
+    const db = firebase.database();
+
+    </script>
+
+    <!-- Schedule Builder Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var date = new Date();
+          
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialDate: date,
+            headerToolbar: false,
+            initialView: "timeGridWeek",
+            height: "auto",
+            weekends: false,
+            expandRows: true,
+            editable: false,
+            selectable: false,
+            nowIndicator: false,
+            allDaySlot: false,
+            slotMinTime: "08:00:00",
+            slotMaxTime: "21:00:00",
+            events: "https://comp430-764fa-default-rtdb.firebaseio.com/events"
+          });
+      
+          calendar.render();
+        });
+      
+    </script>
 
 </body>
 </html>
