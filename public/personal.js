@@ -9,7 +9,7 @@ function openTab(personal){
 
 // TODO: Replace the following with your app's Firebase project configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyC-z98Nc4j11cPpC6eRqB3iQOSlQrfe7aA",
     authDomain: "comp430-764fa.firebaseapp.com",
     databaseURL: "https://comp430-764fa-default-rtdb.firebaseio.com",
