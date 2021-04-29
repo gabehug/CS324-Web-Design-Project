@@ -95,7 +95,7 @@ nav {
 /*table styling*/
 table{
   border-collapse: collapse;
-  border: 5px solid #293293;
+  border: 5px solid #0e3562;
 }
 
 th, td{
@@ -117,7 +117,7 @@ td{
 
 .dropbtn {
   display: inline-block;
-  background-color: #333399;
+  background-color: #5FB8CD;
   /*box-shadow: 5px 7px 16px 0px rgba(0,0,0,0.73);*/
   border-radius: 22px;
   color: white;
