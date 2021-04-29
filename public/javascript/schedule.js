@@ -14350,3 +14350,17 @@ var FullCalendar = (function (exports) {
     return exports;
 
 }({}));
+
+const firebaseConfig = {
+    apiKey: "AIzaSyC-z98Nc4j11cPpC6eRqB3iQOSlQrfe7aA",
+    authDomain: "comp430-764fa.firebaseapp.com",
+    databaseURL: "https://comp430-764fa-default-rtdb.firebaseio.com",
+    projectId: "comp430-764fa",
+    storageBucket: "comp430-764fa.appspot.com",
+    messagingSenderId: "774865356524",
+    appId: "1:774865356524:web:63328ef09e7142cdf907c9",
+    measurementId: "G-NDEX7JKYRL"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
