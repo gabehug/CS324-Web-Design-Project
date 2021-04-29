@@ -1,8 +1,3 @@
-import React, { Component } from "react";
-import firebase from 'firebase';
-import * as firebase from 'firebase'
-
-
 function openTab(personal){
     var i;
     var x = document.getElementsByClassName("personalPage");
@@ -26,32 +21,42 @@ const firebaseConfig = {
   };
 
 ///////////////////////////////////////////////////////////
-  //GOOGLE SIGN IN
-  class tutorial extends Component{
-    render(){
-    return(
-    <div>
-       <button
-             onClick={() => {
-               
-         // Google provider object is created here.
-        const googleAuth = 
-              new firebase.auth.GoogleAuthProvider();
-                   
-        // using the object we will authenticate the user.
-        firebase.auth().signInWithPopup(googleAuth);
-                        }} >
-              Sign in with Google
-        </button>
-     </div>
-       );
-      }
-     }
-     export default tutorial;
+
+const auth = firebase.auth();
+function signUp(){
+    var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+		
+		alert("Signed Up");
+	}
+	
+	
+	
+function signIn(){
+		
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+		
+		
+		
+		
+	}
+	
+function signOut(){
+		
+		auth.signOut();
+		alert("Signed Out");
+		
+	}
+
   
 
 ///////////////////////////////////////////////////////////
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-  export default firebase;
