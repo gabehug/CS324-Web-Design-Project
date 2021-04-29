@@ -20,6 +20,9 @@ const firebaseConfig = {
     measurementId: "G-NDEX7JKYRL"
   };
 
+  ///////////////////////////////////////////////////////////
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 ///////////////////////////////////////////////////////////
 
 const auth = firebase.auth();
@@ -57,6 +60,4 @@ function signOut(){
 
   
 
-///////////////////////////////////////////////////////////
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+
