@@ -50,35 +50,26 @@
                             <td>
                                 <div id="ClassSearch" class="tabcontent">
                                     <!-- Complete form action for search-->
-                                    <form class="full-class-search" autocomplete="off" action="">
-                                        <label for="subject">Subject:
-                                            <input type="text" id="subject" name="subject">
-                                        </label>
-                                        <br></br>
-                                        <label for="course-num">Course Number:
-                                            <input type="number" id="course-num" name="course-num">
-                                        </label>
-                                        <br></br>
-                                        <label for="class-num">Class Number:
-                                            <input type="number" id="class-num" name="class-num">
-                                        </label>
-                                        <br></br>
-                                        <label for="instr-name">Instructor Name:
-                                            <input type="text" id="instr-name" name="instr-name">
-                                        </label>
-                                        <br></br>
-                                        <label for="day-of-week" class="day-of-week">Days of the Week:
-                                            <br>
-                                            <input type="checkbox" name="day-of-week" value="Mon"> Mon
-                                            <input type="checkbox" name="day-of-week" value="Tues"> Tues
-                                            <input type="checkbox" name="day-of-week" value="Wed"> Wed
-                                            <input type="checkbox" name="day-of-week" value="Thurs"> Thurs
-                                            <input type="checkbox" name="day-of-week" value="Fri"> Fri
-                                        </label>
-                                        <br></br>
-                                        <input type="reset" value="Clear">
-                                        <input type="submit" value="Submit">
+                                    <form class="search" style="margin:auto;max-width:600px">
+                                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for classes..." name="search" autocomplete="off">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
                                     </form>
+                                    <h1 style="text-align: center;">Classes</h1>
+                                    <ul id="myUL">
+                                        <li><a href="#">Comp 313</a></li>
+                                        <li><a href="#">Comp 324</a></li>
+                                        <li><a href="#">Math 131</a></li>
+                                        <li><a href="#">Anth 100</a></li>
+                                        <li><a href="#">Hist 101</a></li>
+                                        <li><a href="#">Span 101</a></li>
+                                        <li><a href="#">Bio 101</a></li>
+                                        <li><a href="#">Phil 101</a></li>
+                                        <li><a href="#">Bio 102</a></li>
+                                        <li><a href="#">Uclr 100</a></li>
+                                        <li><a href="#">Clst 271</a></li>
+                                        <li><a href="#">Theo 100</a></li>
+                                        <li><a href="#">Phil 181</a></li>
+                                    </ul>
                                 </div>
                             </td>
                         </tr>
@@ -131,9 +122,6 @@
 
     </main>
 
-    <script src="javascript/schedule.js"></script>
-    <script src="javascript/tab.js"></script>
-
     <footer>
         <div class="wrapper" style="padding-top: 110px;">
             <div id="skew" class="cus-div">
@@ -147,33 +135,32 @@
         </div>
     </footer>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
-
+    <!-- Search Filtering Script -->
     <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyC-z98Nc4j11cPpC6eRqB3iQOSlQrfe7aA",
-        authDomain: "comp430-764fa.firebaseapp.com",
-        databaseURL: "https://comp430-764fa-default-rtdb.firebaseio.com",
-        projectId: "comp430-764fa",
-        storageBucket: "comp430-764fa.appspot.com",
-        messagingSenderId: "774865356524",
-        appId: "1:774865356524:web:63328ef09e7142cdf907c9",
-        measurementId: "G-NDEX7JKYRL"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    const db = firebase.databaseURL();
+        function myFunction() {
+          // Declare variables
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName('li');
+        
+          // Loop through all list items, and hide those who don't match the search query
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
     </script>
 
+    <!-- Other Scripts -->
+    <script src="javascript/schedule.js"></script>
+    <script src="javascript/tab.js"></script>
     <!-- Schedule Builder Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -194,7 +181,7 @@
             slotMinTime: "08:00:00",
             slotMaxTime: "21:00:00",
           });
-          calendar.addEventSource("https://comp430-764fa-default-rtdb.firebaseio.com/events");
+          calendar.addEventSource("./json/events.json");
       
           calendar.render();
         });
