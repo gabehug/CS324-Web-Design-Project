@@ -26,7 +26,16 @@
             allDaySlot: false,
             slotMinTime: "08:00:00",
             slotMaxTime: "21:00:00",
-            events: "https://comp430-764fa-default-rtdb.firebaseio.com/events"
+            events: {
+                url: 'https://comp430-764fa-default-rtdb.firebaseio.com/events',
+                failure: function() {
+                    document.getElementById('script-warning').style.display = 'block'
+                }
+            },
+            loading: function(bool) {
+                document.getElementById('loading').style.display =
+                bool ? 'block' : 'none';
+            }
           });
       
           calendar.render();
