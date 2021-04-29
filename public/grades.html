@@ -33,16 +33,17 @@
 
     <main>
       <section class="grade-header">
-        <h1>Grades - Spring 2021</h1>
+        <h1 id="title"></h1>
 
         <div class="dropdown">
           <button onclick="listTerms()" class="dropbtn">Select Term</button>
           <div id="dropdown-list" class="dropdown-content">
-            <a href="#">Fall 2020</a>
-            <a href="#">Spring 2020</a>
-            <a href="#">Fall 2019</a>
-            <a href="#">Spring 2019</a>
-            <a href="#">Fall 2018</a>
+            <!--add class list-->
+            <a href="#" id="1" onclick="showGrades(this.id)">Spring 2021</a>
+            <a href="#" id="2" onclick="showGrades(this.id)">Fall 2020</a>
+            <a href="#" id="3" onclick="showGrades(this.id)">Spring 2019</a>
+            <a href="#" id="4" onclick="showGrades(this.id)">Fall 2019</a>
+            <a href="#" id="5" onclick="showGrades(this.id)">Spring 2018</a>
           </div>
         </div>
       </section>
@@ -59,33 +60,33 @@
 
             <!--classes are dummy data -- for mockup only-->
             <tr class="class1">
-              <td>COMP 306 - Data Mining</td>
-              <td>3.0</td>
-              <td>A</td>
+              <td id="desc"></td>
+              <td id="credits"></td>
+              <td id="grades"></td>
             </tr>
 
             <tr class="class2">
-              <td>COMP 312 - Open Source Practicum</td>
-              <td>3.0</td>
-              <td>A</td>
+              <td id="desc2"></td>
+              <td id="credits2"></td>
+              <td id="grades2"></td>
             </tr>
 
             <tr class="class3">
-              <td>Math 131 - Applied Calculus</td>
-              <td>3.0</td>
-              <td>B</td>
+              <td id="desc3"></td>
+              <td id="credits3"></td>
+              <td id="grades3"></td>
             </tr>
 
             <tr class="class4">
-              <td></td>
-              <td></td>
-              <td></td>
+              <td id="desc4"></td>
+              <td id="credits4"></td>
+              <td id="grades4"></td>
             </tr>
 
             <tr class="class5">
-              <td></td>
-              <td></td>
-              <td></td>
+              <td id="desc5"></td>
+              <td id="credits5"></td>
+              <td id="grades5"></td>
             </tr>
 
             <tr class="class6">
@@ -118,15 +119,11 @@
             </tr>
             <tr>
               <td>Taken</td>
-              <td></td>
+              <td id="taken"></td>
             </tr>
             <tr>
               <td>Passed</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>In Progress</td>
-              <td></td>
+              <td id="passed"></td>
             </tr>
             <!-- Units Not for GPA -->
             <tr>
@@ -135,28 +132,28 @@
             </tr>
             <tr>
               <td>Taken</td>
-              <td></td>
+              <td id="taken2"></td>
             </tr>
             <tr>
               <td>Passed</td>
-              <td></td>
+              <td id="passed2"></td>
             </tr>
             <tr>
               <td>Transfer Units</td>
-              <td></td>
+              <td id="transfer"></td>
             </tr>
             <!--Total Grade Points -->
             <tr>
               <th>Total Grade Points</th>
-              <td></td>
+              <td id="total"></td>
             </tr>
             <tr>
               <th>/ Units Taken Toward GPA</th>
-              <td></td>
+              <td id="towards"></td>
             </tr>
             <tr>
               <th>=GPA</th>
-              <td></td>
+              <td id="gpa"></td>
             </tr>
           </table>
         </section>
