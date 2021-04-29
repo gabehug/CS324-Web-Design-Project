@@ -1,3 +1,8 @@
+import React, { Component } from "react";
+import firebase from 'firebase';
+import * as firebase from 'firebase'
+
+
 function openTab(personal){
     var i;
     var x = document.getElementsByClassName("personalPage");
@@ -19,6 +24,34 @@ const firebaseConfig = {
     appId: "1:774865356524:web:63328ef09e7142cdf907c9",
     measurementId: "G-NDEX7JKYRL"
   };
+
+///////////////////////////////////////////////////////////
+  //GOOGLE SIGN IN
+  class tutorial extends Component{
+    render(){
+    return(
+    <div>
+       <button
+             onClick={() => {
+               
+         // Google provider object is created here.
+        const googleAuth = 
+              new firebase.auth.GoogleAuthProvider();
+                   
+        // using the object we will authenticate the user.
+        firebase.auth().signInWithPopup(googleAuth);
+                        }} >
+              Sign in with Google
+        </button>
+     </div>
+       );
+      }
+     }
+     export default tutorial;
   
+
+///////////////////////////////////////////////////////////
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  export default firebase;

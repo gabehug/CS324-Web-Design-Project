@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/gwt6vey.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="/assets/logo.png">
+    <link rel="icon" href="assets/logo.png">
+    <script src="/public/javascript/login.js"></script>
+    <script src="/public/javascript/auth.js"></script>
+    <script src="personal.js"></script>
 </head>
 <body>
+    <!--google login test GK -->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="/__/firebase/8.4.2/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+      <script src="/__/firebase/8.4.2/firebase-auth.js"></script>
+  
+     
     <header>
         
         <div class="logo-wrapper">
             <a href="index.html">
-                <img src="/assets/logo.png" height= "50" alt="Locus Clone">
+                <img src="assets/logo.png" height= "50" alt="Locus Clone">
             </a>
             
         
@@ -33,12 +46,32 @@
     </header>
 
     <main>
+
         <div class="circles">
             <span class="dot0"></span>
             <span class="dot1"></span>
             <span class="dot2"></span>
         </div>
-        
+
+        <button class="login-button" onclick="tutorial()">Login</button>
+
+        <!-- Old login code to be deleted -->
+        <!--
+        <div class="login-popup" id="loginForm">
+            <form action= "" class="form-container">
+                
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id= "login-email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="login-pass" name="psw" required>
+
+                <button type="submit" class="btn" onclick= "signInWithEmailAndPassword()">Login</button>
+                <button type="button" class="btn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    -->
+
         <section class="welcome">
             <h1>Welcome to the Student Hub</h1>
         </section>
@@ -116,5 +149,7 @@
         </div>
 
     </footer>
+
+    
 </body>
 </html>
