@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Search</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./schedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="assets/logo.png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var date = new Date();
+          
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialDate: date,
+            headerToolbar: false,
+            initialView: "timeGridWeek",
+            height: "auto",
+            weekends: false,
+            expandRows: true,
+            editable: false,
+            selectable: false,
+            nowIndicator: false,
+            allDaySlot: false,
+            slotMinTime: "08:00:00",
+            slotMaxTime: "21:00:00",
+            events: "./json/events.json"
+          });
+      
+          calendar.render();
+        });
+      
+    </script>
 </head>
 <body>
     <header>
@@ -34,7 +59,8 @@
 
     <main>
         <div style="display: flex;">
-            <section class="left-sec" style="width: 50%; height: 715px;">
+            <!-- Class Search and AcademicRequirement Section -->
+            <section class="left-sec" style="width: 50%; height: 649px;">
                 <table style="width:100%">
                     <th>
                         <tr>
@@ -124,15 +150,16 @@
                 </table>
             </section>
 
-            <!-- Placeholder image for calendar-->
-            <section class="right-sec" style="width:50%">
-                <img src="assets/calendar.png">
+            <!-- Schedule Builder from FullCalendar -->
+            <section class="right-sec" style="width:50%; height: 649px;">
+                <div id='calendar'></div>
             </section>
         </div>
-        
-    </main>
-    <script src="javascript/tab.js"></script>
 
+    </main>
+
+    <script src="javascript/schedule.js"></script>
+    <script src="javascript/tab.js"></script>
 
     <footer>
         <div class="wrapper" style="padding-top: 110px;">
