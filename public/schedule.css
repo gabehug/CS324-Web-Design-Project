@@ -80,7 +80,8 @@ nav {
 /* Search Box */
 
 .search {
-  padding-bottom: 10em;
+  padding-top: 10px;
+  padding-bottom: 5em;
   
 }
 form.search input[type=text] {
@@ -91,10 +92,10 @@ form.search input[type=text] {
   width: 80%;
   background: #f1f1f1;
   border: 0;
+  outline:.2px solid #5FB8CD;
 }
 
 form.search button {
-  float: left;
   width: 20%;
   padding: 10px;
   background: #f1f1f1;
@@ -332,37 +333,36 @@ form.search button:hover {
   border: 0.5px solid #5FB8CD;
   background-color: #f1f1f1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-.full-class-search {
-  width: 439px;
-  margin-top: 30px;
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: auto;
+#ClassSearch h1 {
+  color:#547379;
+  font-size: 24px;
+  
 }
 
-.full-class-search input[type=text], input[type=number], select, textarea{
-  border-color: 0.5px solid #547379;
-  padding: 7px;
-  background: white;
-  border-radius: 5px;
-  float: right;
+#myUL {
+  /* Remove default list styling */
+  list-style: none;
+  margin: auto;
+  padding: 0;
 }
 
-.full-class-search [type=reset], input[type=submit], select, textarea{
-  font-size: 18px;
-  color: white;
-  background: #0e3562;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
 }
 
-.full-class-search [type=reset]:hover, input[type=submit]:hover {
-  background: #5FB8CD;
-  color: white;
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 
 /* Academic Requirement Tab */
